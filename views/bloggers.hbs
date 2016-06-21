@@ -1,0 +1,12 @@
+<h1>Bloggers</h1>
+<a href="/">Home</a>
+<a href="/add-person">Add a Blogger</a>
+{{#each person}}
+  <p>Name: {{this.first_name}} {{this.last_name}}</p>
+  <p>Username: {{this.username}}</p>
+  <p>Age: {{this.age}}</p>
+  <p>
+    <a href="/{{this.id}}/blogger-edit">Edit</a>
+    <a href="/{{this.id}}/blogger-delete">Delete</a>
+  </p>
+{{/each}}

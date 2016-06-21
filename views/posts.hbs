@@ -1,0 +1,13 @@
+<h1>Blog Posts</h1>
+<a href="/">Home</a>
+<a href="/add-post">Add a Post</a>
+{{#each koala}}
+  <p>Title: {{this.title}}</p>
+  <p>{{this.content}}</p>
+  <p>Author: {{this.username}}</p>
+  <p>
+    <a href="/{{this.post_id}}/post-comment">Comment</a>
+    <a href="/{{this.post_id}}/post-edit">Edit</a>
+    <a href="/{{this.post_id}}/post-delete">Delete</a>
+  </p>
+{{/each}}

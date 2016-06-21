@@ -1,0 +1,10 @@
+<h1>Edit the Post</h1>
+<form id="edit-post" action="/{{post.id}}/post-edit" method="post">
+  <p><input type="text" name="title" value="{{post.title}}"></p>
+  <p><textarea form="edit-post" rows=4 cols=100 name="content"
+    value="{{post.content}}">{{post.content}}</textarea></p>
+  <p><select name="person_id">
+    <option default="blogger" value="{{person.id}}">{{person.username}}</option>
+  </select></p>
+  <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,14 @@
+<h1>Add a Comment</h1>
+<form id="add-comment" action="/posts" method="post">
+  <p><select name="post_id">
+    <option default="blogger" value="{{post.id}}">{{post.id}}</option>
+  </select></p>
+  <p><textarea form="add-post" rows=4 cols=100 name="content" placeholder="Type Here"></textarea></p>
+  <p><select name="person_id">
+    <option disabled selected>Name</option>
+    {{#each author}}
+    <option default="blogger" value="{{this.id}}">{{this.username}}</option>
+    {{/each}}
+  </select></p>
+  <input type="submit" value="Submit">
+</form>
