@@ -12,7 +12,7 @@ Comments:
   {{/each}}
 </ul>
 
-<form action="/add-comment" method="post">
+<form action="/add-comment/{{post.id}}" method="post">
   <p><select name="person_id">
     <option disabled selected>Author</option>
     {{#each users}}

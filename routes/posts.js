@@ -3,6 +3,7 @@ var router = express.Router();
 var knex = require('../db/knex');
 var Users = require('../db/api').Users;
 var Posts = require('../db/api').Posts;
+var db = require('../db/api');
 
 router.get('/add-post', function(req, res, next) {
   Users.getAll().then(function(data) {
@@ -16,7 +17,7 @@ router.get('/posts', function(req, res, next) {
   })
 })
 
-router.get('/posts/add', function (req, res) {
+router.get('/posts/:id', function (req, res) {
   db.Posts.getOne(req.params.id).then(function (data) {
     res.render('details', {post: data[1], users: data[0], comments: data[2]})
   })
